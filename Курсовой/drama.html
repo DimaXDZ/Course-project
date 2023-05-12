@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="coursestyle.css">
+	<script src="jd.js"></script>
+	<title></title>
+</head>
+<body>
+	<header>
+		<p id="demo"></p>
+	</header>
+	<nav>
+		<a href="course.html">Обзоры</a>
+		 <a href="page1.html">Книги</a>
+	</nav>
+	<main>
+		<aside>
+			<input type="text" id="Search" placeholder="Поиск..." title="Type in a category"><button onclick="search()">Поиск</button>
+			<a href="drama.html">Драма</a>
+			<a href="detective.html">Детектив</a>
+			<a href="action.html">Боевик</a>
+			<a href="comedy.html">Комедия</a>
+			<a href="adventure.html">Приключения</a>
+			<div class="rek">
+			<h2>Рекомендовано к просмотру</h2>
+			<a href="film1.html"><img src="comedy.jpg"></a>
+			<a href="film1.html"><img src="test.jpg"></a>
+			<a href="film1.html"><img src="zod.jpg"></a>
+			</div>
+		</aside>
+		<article>
+			<ul id="list">
+				<li><a href="film1.html">Мой ужасный сосед</a>
+					<div class="rew">
+						<img src="comedy.jpg">
+						<div class="info">
+						<p>Режисер: Марк Форстер</p>
+						<p>В ролях: Том Хэнкс,Мариана Тревиньо,Рэйчел Келлер </p>
+						</div>
+					</div>
+				</li>
+				<li><a href="film1.html">Жить</a>
+					<div class="rew">
+						<img src="comedy.jpg">
+						<div class="info">
+						<p>Режисер: Марк Форстер</p>
+						<p>В ролях: Том Хэнкс,Мариана Тревиньо,Рэйчел Келлер </p>
+						</div>
+					</div>
+				</li>
+				<li><a href="film1.html">Кит</a>
+					<div class="rew">
+						<img src="comedy.jpg">
+						<div class="info">
+						<p>Режисер: Марк Форстер</p>
+						<p>В ролях: Том Хэнкс,Мариана Тревиньо,Рэйчел Келлер </p>
+						</div>
+					</div>
+				</li>
+				<li><a href="">Джокер</a>
+					<a href="film1.html">Nam</a>
+					<div class="rew">
+						<img src="comedy.jpg">
+						<div class="info">
+						<p>Режисер: Марк Форстер</p>
+						<p>В ролях: Том Хэнкс,Мариана Тревиньо,Рэйчел Келлер </p>
+						</div>
+					</div>
+				</li>
+				<li><a href="film1.html">Тихий омут</a>
+					<div class="rew">
+						<img src="comedy.jpg">
+						<div class="info">
+						<p>Режисер: Марк Форстер</p>
+						<p>В ролях: Том Хэнкс,Мариана Тревиньо,Рэйчел Келлер </p>
+						</div>
+					</div>
+				</li>
+				<li><a href="film1.html">Отец</a>
+					<div class="rew">
+						<img src="comedy.jpg">
+						<div class="info">
+						<p>Режисер: Марк Форстер</p>
+						<p>В ролях: Том Хэнкс,Мариана Тревиньо,Рэйчел Келлер </p>
+						</div>
+					</div>
+				</li>
+		</ul>
+		<script type="text/javascript">
+	function search() {
+    let input = document.getElementById("Search");
+    let filter = input.value.toUpperCase();
+    let ul = document.getElementById("list");
+    let li = ul.getElementsByTagName("li");
+ 
+    // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
+    for (let i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1 && a.innerHTML.toUpperCase()===filter) {
+            li[i].style.display = "";
+        }else{
+        	li[i].style.display ="none";
+        }
+    }
+}
+document.addEventListener('onclick', search);
+
+</script>
+		</article>
+	</main>
+	<footer>
+		<div>
+			<p>Дмитрий Лях</p>
+			<p>dmitriliah@gmail.com</p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+table{
+	empty-cells: hide;
+	}
+td{
+	border: 1px solid grey;
+
+}
+#frs{
+	background-color: darkblue;
+	color: white;
+}
+#cse{
+	background-color: #00BFFF;
+	color: white;
+}
+#dad{
+	background-color: purple;
+	color: white;
+}
+#bab{
+	background-color: green;
+	color: white;
+}

@@ -1,0 +1,156 @@
+*{
+	margin: 0;
+}
+a{
+  display: block;
+}
+nav a{
+  color: rgb(236, 169, 87);
+}
+a:hover{
+  transition: color 0.2s;
+  color: red;
+
+}
+article a{
+  text-align: center;
+}
+button{
+  background-color: #f5ae80;
+  color: #A64100;
+  border-color: #f5ae80;
+}
+input{
+  margin-right: 50px;
+  background-color: #f5ae80;
+  border-color: #A64100;
+}
+.name{
+  text-align: center;
+}
+#log{
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.rek h2{
+  text-align: left;
+}
+.rek a{
+  margin-top: 30px;
+}
+a{
+  text-decoration: none;
+  font-size: 20px;
+}
+li{
+  list-style: none;
+
+}
+header{
+  background-color: #A64100;
+}
+h1,a,p{
+  font-family:Georgia,serif ;
+}
+h1{
+	text-align: center;
+  color: #f5ae80;
+}
+nav{
+  background-color: #BF6830;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+main{
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+aside{
+  height: auto;
+  width: auto;
+  background-color:#f5ae80;
+}
+aside a{
+  padding-right: 500px;
+  text-align: left;
+}
+aside input{
+ align-self: left;
+}
+aside button{
+  align-self: left;
+}
+article{
+  height: 1500px;
+  width: 1700px;
+  background-color: #f5ae80;
+}
+footer{
+ background-color: #A64100;
+ text-align: left;
+ height: 50px;
+}
+footer div p{
+  margin-top: 10px;
+}
+.rew{
+  display: flex;
+  margin-left: 300px;
+  margin-top: 10px;
+}
+.info{
+  float: right;
+  margin-top: 50px;
+  margin-left: 5px;
+}
+p{
+  font-size: 20px;
+}
+.bok{
+  height: 150px;
+}
+@media (orientation:landscape){
+  aside{
+    text-align: center;  
+  }
+
+}
+@media (orientation:portrait){
+  h1{
+    text-align: left;
+  }
+ main,header,footer,aside,article{
+  width: auto;
+  height: auto;
+ }
+ h1{
+  text-align: center;
+ }
+ main{
+  display: flex;
+  flex-direction: column;
+ }
+ .rew{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+ }
+ .rew img{
+  width: 150px;
+  height: 200px;
+ }
+ article a{
+  text-align: left;
+ }
+ aside{
+ width: auto;
+ align-items: center;
+ text-align: center;
+ }
+ .info{
+  text-align: left;
+ }
+}

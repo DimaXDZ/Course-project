@@ -1,0 +1,8 @@
+article{
+	height: auto;
+}
+@media(orientation:portrait){
+	.rew .img{
+		text-align:center;
+	}
+}

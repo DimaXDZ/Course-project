@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="coursestyle.css">
+	<script src="jd.js"></script>
+	<title>Фантастика</title>
+</head>
+<body>
+	<header>
+		<img src="logo.svg" id="log">
+		<h1 id="demo"></h1>
+	</header>
+	<nav>
+		<a href="course.html">Обзоры</a>
+		 <a href="page1.html">Книги</a>
+	</nav>
+	<main>
+		<aside>
+			<input type="text" id="Search" placeholder="Поиск..." title="Type in a category"><button onclick="search()">Поиск</button>
+			<a href="bfantaz.html">Фантастика</a>
+			<a href="bdetective.html">Детектив</a>
+			<a href="bhorror.html">Ужасы</a>
+			<a href="bframa.html">Роман</a>
+			<a href="badventure.html">Приключения</a>
+			<div class="rek">
+			<h2>Рекомендовано к прочтению</h2>
+			<a href="book1.html"><img src="kill.jpg" class="bok"></a>
+			<a href="book1.html"><img src="kill.jpg" class="bok"></a>
+			<a href="book1.html"><img src="kill.jpg" class="bok"></a>
+			</div>
+		</aside>
+		<article>
+			<ul id="list">
+				<li><a href="book1.html">Убийство в восточном экспрессе</a>
+					<div class="rew">
+						<img src="kill.jpg" class="bok">
+						<div class="info">
+						<p>Автор: Агата Кристи</p>
+						</div>
+					</div>
+				</li>
+				<li><a href="book1.html">Мор.Ученик смерти</a>
+					<div class="rew">
+						<img src="kill.jpg" class="bok">
+						<div class="info">
+						<p>Автор: Терри Пратчет</p>
+						</div>
+					</div>
+				</li>
+				<li><a href="book1.html">Сияние</a>
+					<div class="rew">
+						<img src="kill.jpg" class="bok">
+						<div class="info">
+						<p>Автор: Стивен кинг</p>
+						</div>
+					</div>
+				</li>
+				<li><a href="book1.html">Противостояние</a>
+					<div class="rew">
+						<img src="kill.jpg" class="bok">
+						<div class="info">
+						<p>Автор: Стивен Кинг</p>
+						</div>
+					</div>
+				</li>
+				<li><a href="book1.html">Деяние</a>
+					<div class="rew">
+						<img src="kill.jpg" class="bok">
+						<div class="info">
+						<p>Автор: Агата Кристи</p>
+						</div>
+					</div>
+				</li>
+				<li><a href="book1.html">13 негритят</a>
+					<div class="rew">
+						<img src="kill.jpg" class="bok">
+						<div class="info">
+						<p>Автор: Агата Кристи</p>
+						</div>
+					</div>
+				</li>
+				<li><a href="book1.html">Идиот</a>
+					<div class="rew">
+						<img src="kill.jpg" class="bok">
+						<div class="info">
+						<p>Автор: Агата Кристи</p>
+						</div>
+					</div>
+				</li>
+		</ul>
+		<script type="text/javascript">
+	function search() {
+    let input = document.getElementById("Search");
+    let filter = input.value.toUpperCase();
+    let ul = document.getElementById("list");
+    let li = ul.getElementsByTagName("li");
+ 
+    // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
+    for (let i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1 && a.innerHTML.toUpperCase()===filter) {
+            li[i].style.display = "";
+        }else{
+        	li[i].style.display = "none";
+        }
+    }
+}
+document.addEventListener('onclick', search);
+let text, parser, xmlDoc;
+
+text = "<contacts>" +
+"<name>КИНОФИЛ</name>" +
+"</contacts>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("demo").innerHTML =
+xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+</script>
+		</article>
+	</main>
+	<footer>
+		<h2>Contact information</h2>
+	</footer>
+</body>
+</html>
